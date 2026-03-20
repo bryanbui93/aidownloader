@@ -1,0 +1,3 @@
+[console_scripts]
+aidownloader = downloader.cli:main
+

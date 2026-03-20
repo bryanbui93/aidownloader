@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: aidownloader
+Version: 1.0.0
+Summary: Batch download videos from TikTok, Douyin, Facebook Reels & YouTube Shorts via Excel input
+Home-page: UNKNOWN
+Author: donbach
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+
+UNKNOWN
+

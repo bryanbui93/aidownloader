@@ -1,0 +1,14 @@
+README.md
+setup.py
+aidownloader.egg-info/PKG-INFO
+aidownloader.egg-info/SOURCES.txt
+aidownloader.egg-info/dependency_links.txt
+aidownloader.egg-info/entry_points.txt
+aidownloader.egg-info/requires.txt
+aidownloader.egg-info/top_level.txt
+downloader/__init__.py
+downloader/cli.py
+downloader/downloader.py
+downloader/excel_parser.py
+downloader/models.py
+downloader/progress.py
