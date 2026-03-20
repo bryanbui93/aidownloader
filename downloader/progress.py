@@ -1,4 +1,5 @@
-from contextlib import contextmanager
+import io
+import sys
 from typing import List
 
 from rich.console import Console, Group as RichGroup
@@ -19,7 +20,26 @@ from rich.text import Text
 
 from .models import DownloadResult, DownloadStatus
 
-console = Console()
+
+def _make_console() -> Console:
+    """Create a Rich Console with UTF-8 output on Windows.
+
+    Windows CMD/PowerShell defaults to cp1252 which cannot encode emoji.
+    Wrapping stdout in a UTF-8 TextIOWrapper fixes UnicodeEncodeError.
+    """
+    if sys.platform == "win32":
+        try:
+            utf8_stdout = io.TextIOWrapper(
+                sys.stdout.buffer, encoding="utf-8", errors="replace"
+            )
+            return Console(file=utf8_stdout, highlight=False)
+        except AttributeError:
+            # Fallback: stdout has no .buffer (e.g. inside some IDEs)
+            return Console(highlight=False)
+    return Console()
+
+
+console = _make_console()
 
 # Status icon mapping
 _STATUS_STYLE = {
