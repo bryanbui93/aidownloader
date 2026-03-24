@@ -11,10 +11,12 @@ setup(
         "yt-dlp>=2024.1.0",
         "openpyxl>=3.1.0",
         "rich>=13.7.0",
+        "flask>=3.0.0",
     ],
     entry_points={
         "console_scripts": [
             "aidownloader=downloader.cli:main",
+            "aidownloader-web=web.app:run_web",
         ],
     },
     classifiers=[

@@ -12,3 +12,5 @@ downloader/downloader.py
 downloader/excel_parser.py
 downloader/models.py
 downloader/progress.py
+web/__init__.py
+web/app.py

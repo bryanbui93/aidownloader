@@ -1,3 +1,4 @@
 [console_scripts]
 aidownloader = downloader.cli:main
+aidownloader-web = web.app:run_web
 
